@@ -20,7 +20,6 @@ if __name__ == '__main__':
     unwanted_columns = ['Name', 'Ticket', 'Cabin', 'Embarked']
 
     train_data, test_data = filter_unwanted_columns(train_data, test_data, unwanted_columns)
-    print(train_data)
 
     #Fill NaN data and replace gender with numbers for test_data
     test_data = test_data.fillna(method = "ffill")
@@ -37,4 +36,7 @@ if __name__ == '__main__':
     forest = forest.fit(train_data, survived)
     res = forest.predict(test_data)
     df = pd.DataFrame(res)
-    df.to_csv('solution2.csv')
+
+    
+    #This is only to write the results to a csv
+    #df.to_csv('solution.csv')
