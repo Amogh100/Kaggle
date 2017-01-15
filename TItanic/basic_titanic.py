@@ -37,6 +37,6 @@ if __name__ == '__main__':
     res = forest.predict(test_data)
     df = pd.DataFrame(res)
 
-    
+
     #This is only to write the results to a csv
     #df.to_csv('solution.csv')
